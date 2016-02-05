@@ -1,4 +1,4 @@
-<foooter>
+<footer>
 	<div class="container">
 		<p>
 			© Ryan Oosterling 2015. All rights Reserved | 
