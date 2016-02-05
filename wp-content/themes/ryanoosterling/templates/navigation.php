@@ -2,7 +2,7 @@
     <nav class="home">
         <div class="container">
             <div class="menu-logo">
-                <img class="small-logo" src="<?php bloginfo('template_url'); ?>/img/logo-icon.svg">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="small-logo" src="<?php bloginfo('template_url'); ?>/img/logo-icon.svg"></a>
             </div>
             <?php
                 $args = array(
@@ -31,8 +31,12 @@
     <nav class="page">
         <div class="container">
             <div class="menu-logo">
-                <img class="big-logo" src="<?php bloginfo('template_url'); ?>/img/logo.svg">
-                <img class="small-logo" src="<?php bloginfo('template_url'); ?>/img/logo-icon.svg">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <img class="big-logo" src="<?php bloginfo('template_url'); ?>/img/logo.svg">
+                </a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <img class="small-logo" src="<?php bloginfo('template_url'); ?>/img/logo-icon.svg">
+                </a>
             </div>
             <?php
                 $args = array(
