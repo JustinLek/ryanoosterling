@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row propose">
         <div class="col-md-5 left">
-            <h1>Ryan Oosterling Test</h1>
+            <h1>Ryan Oosterling</h1>
             <div class="social">
                 <a href="<?php echo get_option('instagram_url'); ?>"> <i class="ro-instagram"></i></a>
                 <a href="<?php echo get_option('facebook_url'); ?>"> <i class="ro-facebook"></i></a>
