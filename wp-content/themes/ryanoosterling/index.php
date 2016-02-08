@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php require_once ('templates/slider.php'); ?>
-<div class="fake-div"></div>
 <?php require_once ('templates/navigation.php'); ?>
 <div class="container">
     <div class="row propose">
