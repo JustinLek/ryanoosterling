@@ -9,7 +9,7 @@
     }
 
     body{
-        font-family: 'Hind', sans-serif;
+        font-family: 'Hind', sans-serif !important;
         color:#474747;
         line-height: 21px;
     }
@@ -22,16 +22,6 @@
     .clear{
         clear: both;
     }
-    .logo{
-        top: 40px;
-        position: absolute;
-        /*left: 40px;*/
-        z-index: 999999;
-    }
-
-    .logo a img{
-        width: 50%;
-    }
 
     .button{
         display: inline-block;
@@ -41,33 +31,80 @@
         color: #c1c1c1;
     }
 
-    .button:hover i{
-        margin-left: 25px;
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        -ms-transition: all 0.2s ease;
-        transition: all 0.2s ease;
+    .logo{
+        display: none;
     }
 
-    .button.light:hover{
-        text-decoration: none;
-        color: #ffffff;
+    nav{
+        background: #fff;
+        height: 65px;
     }
 
-    .button.dark:hover{
-        text-decoration: none;
+    nav.navbar-default{
+        background-color: #fff !important;
+        border: none !important;
+    }
+
+    nav.navbar{
+        border-radius: 0px;
+    }
+
+    nav.navbar-fixed-top .menu-logo img{
+        height: 25px;
+        margin: 5px 0 0 0;
+    }
+
+    nav.navbar-fixed-top.page .menu-logo a:first-child{
+        display: none;
+    }
+
+    nav button.navbar-toggle{
+        padding: 25px 5px 25px 25px !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important; 
+        border:none !important;
+    }
+
+    nav button.navbar-toggle:hover, nav button.navbar-toggle:focus {
+        background-color: transparent !important;
+    }
+
+    nav button span{
+        background-color: #323232 !important;
+    }
+
+    nav.navbar-fixed-top #navbar{
+        background: #fff;
+        position: absolute;
+        top: 65px;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    nav #navbar ul.navigation li{
+        list-style: none;
+    }
+
+    nav #navbar ul.navigation li a{
+        display: inline-block;
+        padding: 10px 20px;
+        color:#474747;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 100;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
         color: #323232;
     }
 
-    .button i{
-        margin-left: 15px;
-        font-size: 13px;
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        -ms-transition: all 0.2s ease;
-        transition: all 0.2s ease;
+    nav #navbar ul.navigation li.current_page_item a{
+        display:block;
+        content:attr(data);
+        font-weight:bold;
+        overflow:hidden;
+        margin-bottom:-1px;
+        text-decoration: none;
     }
 
     .nopadding {
@@ -119,156 +156,9 @@
         top: 150px;
     }
 
-    .fake-div.fake{
-        height: 120px;
-    }
-
-    nav{
-        height: 80px;
-        width: 100%;
-        background: #fff;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        transition: all 0.3s;
-        overflow: hidden;
-    }
-
-    nav.page{
-        height: 120px;
-        padding: 20px 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-    }
-
-    nav.smaller{
-        height: 80px;
-        padding: 0;
-    }
-
-    nav.page.smaller .menu-logo img.big-logo{
-        top: -80px;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-
-    nav.page .menu-logo img.big-logo{
-        height: 80px;
-        top: 20px;
-        position: absolute;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-
-    nav.page.smaller .menu-logo img.small-logo{
-        top:20px;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-
-    nav.page .menu-logo img.small-logo{
-        top:120px;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-
-    nav.home{
-        position: absolute;
-    }
-
-    nav.home .menu-logo img.small-logo{
-        margin-top: 20px;
-    }
-
-    nav .menu-logo img.small-logo{
-        position: absolute;
-        height: 40px;
-        margin-left: 60px;
-    }
-
-    nav ul{
-        margin:20px;
-    }
-
     #portfolio-filter{
         height: 80px;
         padding: 20px;
-    }
-
-    nav ul, #portfolio-filter ul{
-        display: table;
-        margin: 20px auto;
-
-    }
-
-    nav ul li, #portfolio-filter ul li{
-        list-style: none;
-        float: left;
-    }
-
-    nav ul li a, #portfolio-filter ul li a{
-        display: inline-block;
-        padding: 10px 20px;
-        color:#474747;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 100;
-    }
-
-    nav ul li a:hover, #portfolio-filter ul li a:hover{
-        font-weight: 700;
-        color: #474747;
-        text-decoration: none;
-    }
-
-    nav ul li a::after, #portfolio-filter ul li a::after{
-        display:block;
-        content:attr(data);
-        font-weight:bold;
-        height:1px;
-        color:transparent;
-        overflow:hidden;
-        visibility:hidden;
-        margin-bottom:-1px;
-    }
-
-    nav ul li.current_page_item a, #portfolio-filter ul li a.current{
-        display:block;
-        content:attr(data);
-        font-weight:bold;
-        overflow:hidden;
-        margin-bottom:-1px;
-        text-decoration: none;
-    }
-
-    nav.fixed{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80px;
-        background: #fff;
-        z-index: 9999;
-        -webkit-transition: all 0.8s linear;
-        -moz-transition: all 0.8s linear;
-        -o-transition: all 0.8s linear;
-        -ms-transition: all 0.8s linear;
-        transition: all 0.8s linear;
     }
 
     .propose{
@@ -391,10 +281,6 @@
     .home-contact h1{
         text-align: center;
         margin: 0;
-    }
-
-    .header{
-        margin-top: 120px;
     }
 
     .header .header-img{
@@ -643,7 +529,192 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    
+    .logo{
+        display: block;
+        top: 40px;
+        position: absolute;
+        /*left: 40px;*/
+        z-index: 999999;
+    }
+
+    .logo a img{
+        width: 50%;
+    }
+
+    nav{
+        height: 80px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    nav.page{
+        height: 120px;
+        padding: 20px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    nav.smaller{
+        height: 80px;
+        padding: 0;
+    }
+
+    nav.page.smaller .menu-logo img.big-logo{
+        top: -80px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    nav.page .menu-logo img.big-logo{
+        height: 80px;
+        top: 20px;
+        position: absolute;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    nav.page.smaller .menu-logo img.small-logo{
+        top:20px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    nav.page .menu-logo img.small-logo{
+        top:120px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    nav.home{
+        position: absolute;
+    }
+
+    nav.home .menu-logo img.small-logo{
+        margin-top: 5px;
+    }
+
+    nav .menu-logo img.small-logo{
+        position: absolute;
+        height: 40px;
+        margin-left: 60px;
+    }
+
+    nav ul{
+        margin:20px;
+    }
+
+    nav ul, #portfolio-filter ul{
+        display: table;
+        margin: 20px auto;
+
+    }
+
+    nav ul li, #portfolio-filter ul li{
+        list-style: none;
+        float: left;
+    }
+
+    nav ul li a, #portfolio-filter ul li a{
+        display: inline-block;
+        padding: 10px 20px;
+        color:#474747;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    nav ul li a:hover, #portfolio-filter ul li a:hover{
+        font-weight: 700;
+        color: #474747;
+        text-decoration: none;
+    }
+
+    nav ul li a::after, #portfolio-filter ul li a::after{
+        display:block;
+        content:attr(data);
+        font-weight:bold;
+        height:1px;
+        color:transparent;
+        overflow:hidden;
+        visibility:hidden;
+        margin-bottom:-1px;
+    }
+
+    nav ul li.current_page_item a, #portfolio-filter ul li a.current{
+        display:block;
+        content:attr(data);
+        font-weight:bold;
+        overflow:hidden;
+        margin-bottom:-1px;
+        text-decoration: none;
+    }
+
+    nav.fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 9999;
+        -webkit-transition: all 0.8s linear;
+        -moz-transition: all 0.8s linear;
+        -o-transition: all 0.8s linear;
+        -ms-transition: all 0.8s linear;
+        transition: all 0.8s linear;
+    }
+
+    .header{
+        margin-top: 120px;
+    }
+
+    .button:hover i{
+        margin-left: 25px;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .button.light:hover{
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .button.dark:hover{
+        text-decoration: none;
+        color: #323232;
+    }
+
+    .button i{
+        margin-left: 15px;
+        font-size: 13px;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
 }
 
 /* Medium Devices, Desktops */
