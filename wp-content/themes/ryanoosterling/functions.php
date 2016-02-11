@@ -92,7 +92,7 @@ function portfolio() {
 function parallax($path, $quote) {
 	$url = get_bloginfo('template_url').'/img/'.$path;
     if ($quote) {
-        echo '<div class="parallax-window" data-parallax="scroll" data-image-src="'.$url.'"><div class="col-md-6"></div><div class="col-md-6"><p class="parallax-quote">"'.$quote.'"</p></div></div>';
+        echo '<div class="parallax-window hidden-xs" data-parallax="scroll" data-image-src="'.$url.'"><div class="col-md-6"></div><div class="col-md-6"><p class="parallax-quote">"'.$quote.'"</p></div></div>';
     }else{
 	    echo '<div class="parallax-window" data-parallax="scroll" data-image-src="'.$url.'"></div>';
     }
