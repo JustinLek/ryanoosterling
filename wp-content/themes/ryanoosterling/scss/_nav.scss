@@ -1,0 +1,170 @@
+nav{
+    @include breakpoint(onlyphone){
+        height: 65px;
+    }
+    &.home{
+        position: absolute;
+        width: 100%;
+        @include breakpoint(onlyphone){
+            position: fixed;
+        }
+    }
+    &.fixed{
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include breakpoint(tablet){
+            height: 80px;
+        }
+        background: #fff;
+        z-index: 9999;
+        @include transition(all 0.8s linear)
+    }
+    &::after{
+        clear: both;
+    }
+    &.page{
+        height: 120px;
+        padding: 20px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        .menu-logo {
+            a:first-child{
+                display: none;
+                img
+                    &.big-logo{
+                        height: 80px;
+                        top: 20px;
+                        position: absolute;
+                        @include transition(all 0.3s)
+                    }
+                    &.small-logo{
+                        top:20px;
+                        @include transition(all 0.3s)
+                    }
+            }
+        }
+    }
+    &.smaller{
+        height: 80px;
+        padding: 0;
+        img.big-logo{
+            top: -80px;
+            @include transition(all 0.3s)
+        }
+    }
+    &.navbar{
+
+    }
+    &.navbar-fixed-top{
+        .menu-logo{
+            img{
+                height: 25px;
+                margin: 5px 0 0 0;
+            }
+        }
+        #navbar{
+            &.navbar-collapse {
+                background: #fff;
+                position: absolute;
+                top: 65px;
+                width: 100%;
+                padding-top: 10px;
+            }
+        }  
+    }
+    &.navbar-default{
+        background-color: #fff ;
+        border: none ;
+    }
+    .container{
+        .navbar-header{
+
+        }
+        .menu-logo{
+            @include breakpoint(tablet){
+                a.navbar-brand{
+                    img.small-logo{
+                        position: absolute;
+                        height: 40px;
+                        margin: 5px 60px;
+                    }
+                }
+            }
+        }
+    }
+    button{
+        &.navbar-toggle{
+            padding: 25px 5px 25px 25px;
+            margin-top: 0;
+            margin-right: 0; 
+            border:none;
+            &:hover{
+                background-color: transparent !important;
+            }
+        }
+        &.collapsed{
+
+        }
+        span{
+            &.sr-only{
+
+            }
+            &.icon-bar{
+                background-color: #323232 !important;
+            }
+        }
+    }
+    #navbar{    
+        &.collapse{
+
+        }
+        ul.navigation{
+            display: table;
+            margin: 20px auto;
+            li{
+                list-style: none;
+                @include breakpoint(tablet){
+                    float: left;
+                }
+                &.current_page_item{
+                    a{
+                        display:block;
+                        content:attr(data);
+                        font-weight:bold;
+                        overflow:hidden;
+                        margin-bottom:-1px;
+                        text-decoration: none;
+                    }
+                }
+                a{
+                    padding: 10px 20px;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 100;
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    color: #323232;
+                    &:hover{
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+                    &::after{
+                        display:block;
+                        content:attr(data);
+                        font-weight:bold;
+                        height:1px;
+                        color:transparent;
+                        overflow:hidden;
+                        visibility:hidden;
+                        margin-bottom:-1px;
+                    }
+                }
+            }
+        }
+    }
+}
