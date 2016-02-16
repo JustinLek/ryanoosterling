@@ -5,7 +5,7 @@
 }?>
 
     <nav class="<?php echo $class; ?> navbar navbar-default">
-        <div class="nav-container container">
+        <div class="container">
             <div class="navbar-header"></div>
             <div class="menu-logo">
             <?php if($class == 'page'){ ?>
