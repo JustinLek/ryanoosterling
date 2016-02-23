@@ -45,7 +45,7 @@ function recentPosts() {
 		<div class="col-md-6 nopadding recent"style="background-image: url(<?php echo $image_url; ?>)">
 			<div class="text">
 				<h2><?php the_title() ?></h2>
-                <a class="button light desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
+                <a class="button dark desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
                 <a class="mobile" href="<?php echo get_permalink(); ?>"><i class="ro-arrow"></i></a>
 			</div>
 		</div>
@@ -73,7 +73,8 @@ function portfolio() {
             <img class="<?php echo $orrientation; ?>" src="<?php echo $image[0]; ?>">
             <div class="text">
                 <h2><?php the_title() ?></h2>
-                <a class="button light" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
+                <a class="button dark desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
+                <a class="mobile" href="<?php echo get_permalink(); ?>"><i class="ro-arrow"></i></a>
             </div>
         </div>
         <?php endwhile;

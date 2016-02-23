@@ -70,7 +70,6 @@ $(document).ready(function(){
             $nav = $('nav.navbar');
 
         function resize() {
-            console.log($window.width());
             if ($window.width() < 752) {
                 return $nav.addClass('navbar-fixed-top');
             }
