@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Tutorial theme</title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/libs/fonts/icon.css">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic|Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400|Hind:300,600,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/libs/superslides/stylesheets/superslides.css">
