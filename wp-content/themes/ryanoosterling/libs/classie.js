@@ -65,4 +65,20 @@ $(document).ready(function(){
               window.classie = classie;
         }
     })( window );
+    (function($) {
+        var $window = $(window),
+            $nav = $('nav.navbar');
+
+        function resize() {
+            if ($window.width() < 752) {
+                return $nav.addClass('navbar-fixed-top');
+            }
+
+            $nav.removeClass('navbar-fixed-top');
+        }
+
+        $window
+            .resize(resize)
+            .trigger('resize');
+    })(jQuery);
 })

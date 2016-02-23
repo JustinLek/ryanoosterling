@@ -1,0 +1,25 @@
+.button{
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #c1c1c1;
+    &:hover{
+        text-decoration: none;
+        i{
+            margin-left: 25px;
+            @include transition(all 0.2s ease);
+        }
+        &.light{
+            color: #ffffff;
+        }
+        &.dark{
+            color: #323232;
+        }
+    }
+    i{
+        margin-left: 15px;
+        font-size: 13px;
+        @include transition(all 0.2s ease);
+    }
+}

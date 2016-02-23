@@ -16,7 +16,6 @@
             <li>
                 <a href="#" class="current" data-filter="*" title data="All Photo's">All Photo's</a>
             </li>
-            <div class="clear"></div>
         </ul>
     </div>
 </div>

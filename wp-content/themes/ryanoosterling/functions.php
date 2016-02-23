@@ -33,16 +33,6 @@ function my_strip_tags($content='') {
    return strip_tags($content, '<p><a><i><div>');
 }
 
-// add_filter( 'the_content_more_link', 'modify_read_more_link' );
-// function modify_read_more_link() {
-// 	$type = get_post_type();
-// 	if ($type == 'post') {
-// 		return'<div><a href="' . get_permalink() . '" class="btn btn-orange">Bekijk project <i class="fa fa-angle-right fa-lg"></i></a></div>';
-// 	}elseif ($type == 'page') {
-// 		return'<div><a href="' . get_permalink() . '" class="btn btn-orange">Lees meer <i class="fa fa-angle-right fa-lg"></i></a></div>';
-// 	}
-// }
-
 add_image_size( 'featured-thumb', 500, 500, true ); // (cropped)
 
 function recentPosts() {
@@ -55,7 +45,8 @@ function recentPosts() {
 		<div class="col-md-6 nopadding recent"style="background-image: url(<?php echo $image_url; ?>)">
 			<div class="text">
 				<h2><?php the_title() ?></h2>
-                <a class="button light" href=""> view album <i class="ro-arrow"></i></a>
+                <a class="button dark desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
+                <a class="mobile" href="<?php echo get_permalink(); ?>"><i class="ro-arrow"></i></a>
 			</div>
 		</div>
 		<?php endwhile;
@@ -82,7 +73,8 @@ function portfolio() {
             <img class="<?php echo $orrientation; ?>" src="<?php echo $image[0]; ?>">
             <div class="text">
                 <h2><?php the_title() ?></h2>
-                <a class="button light" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
+                <a class="button dark desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
+                <a class="mobile" href="<?php echo get_permalink(); ?>"><i class="ro-arrow"></i></a>
             </div>
         </div>
         <?php endwhile;
@@ -92,7 +84,7 @@ function portfolio() {
 function parallax($path, $quote) {
 	$url = get_bloginfo('template_url').'/img/'.$path;
     if ($quote) {
-        echo '<div class="parallax-window" data-parallax="scroll" data-image-src="'.$url.'"><div class="col-md-6"></div><div class="col-md-6"><p class="parallax-quote">"'.$quote.'"</p></div></div>';
+        echo '<div class="parallax-window hidden-xs" data-parallax="scroll" data-image-src="'.$url.'"><div class="col-md-6"></div><div class="col-md-6"><p class="parallax-quote">"'.$quote.'"</p></div></div>';
     }else{
 	    echo '<div class="parallax-window" data-parallax="scroll" data-image-src="'.$url.'"></div>';
     }
