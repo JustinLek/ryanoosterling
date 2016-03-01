@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php require_once ('templates/slider.php'); ?>
-<?php require_once ('templates/navigation.php'); ?>
+<?php require_once ('partials/slider.php'); ?>
+<?php require_once ('partials/navigation.php'); ?>
 <div class="container">
     <div class="row propose">
         <div class="col-xs-12 col-md-5 left">

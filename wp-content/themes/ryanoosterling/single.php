@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php require_once('templates/navigation.php'); ?>
+<?php require_once('partials/navigation.php'); ?>
 <div id="single">
     <div class="container">
 

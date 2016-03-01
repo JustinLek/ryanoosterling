@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php require_once('templates/navigation.php'); ?>
+<?php require_once('partials/navigation.php'); ?>
 <div class="header">
     <div class="header-img">
         <h2><?php the_title(); ?></h2>

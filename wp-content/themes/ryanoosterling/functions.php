@@ -2,6 +2,8 @@
 
 require get_template_directory() . '/inc/function-admin.php';
 require get_template_directory() . '/inc/enqueue.php';
+require get_template_directory() . '/partials/portfolio.php';
+require get_template_directory() . '/partials/recent.php';
 
 register_nav_menu( 'nav', 'Primary' );
 add_theme_support( 'post-thumbnails' ); 
@@ -35,54 +37,8 @@ function my_strip_tags($content='') {
 
 add_image_size( 'featured-thumb', 500, 500, true ); // (cropped)
 
-function recentPosts() {
-	$rPosts = new WP_Query();
-	$rPosts->query('showposts=2');
-		while ($rPosts->have_posts()) : $rPosts->the_post(); 
-        $idd = get_the_ID();?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $idd ), 'featured-thumb' ); ?>
-		<?php $image_url = $image[0]; ?>
-		<div class="col-md-6 nopadding recent"style="background-image: url(<?php echo $image_url; ?>)">
-			<div class="text">
-				<h2><?php the_title() ?></h2>
-                <a class="button dark desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
-                <a class="mobile" href="<?php echo get_permalink(); ?>"><i class="ro-arrow"></i></a>
-			</div>
-		</div>
-		<?php endwhile;
-	wp_reset_query();
-}
-
-function portfolio() {
-    $count  = 1;
-    $rPosts = new WP_Query();
-    $rPosts->query('showposts');
-        while ($rPosts->have_posts()) : $rPosts->the_post(); 
-        $idd = get_the_ID();
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $idd ), 'large' );
-        list($width, $height) = getimagesize($image[0]);
-        if ($width > $height) {
-            $orrientation = 'landscape';
-        } else {
-            $orrientation = 'portrait';
-        }
-        $image_url = $image[0]; 
-        $categories = get_the_category( $idd );
-        $cat = $categories[0]->slug;?>
-        <div class="portfolio-box-1 <?php echo $cat; ?>">
-            <img class="<?php echo $orrientation; ?>" src="<?php echo $image[0]; ?>">
-            <div class="text">
-                <h2><?php the_title() ?></h2>
-                <a class="button dark desktop" href="<?php echo get_permalink(); ?>"> view album <i class="ro-arrow"></i></a>
-                <a class="mobile" href="<?php echo get_permalink(); ?>"><i class="ro-arrow"></i></a>
-            </div>
-        </div>
-        <?php endwhile;
-    wp_reset_query();
-}
-
 function parallax($path, $quote) {
-	$url = get_bloginfo('template_url').'/img/'.$path;
+	$url = get_bloginfo('template_url').'/assets/img/'.$path;
     if ($quote) {
         echo '<div class="parallax-window hidden-xs" data-parallax="scroll" data-image-src="'.$url.'"><div class="col-md-6"></div><div class="col-md-6"><p class="parallax-quote">"'.$quote.'"</p></div></div>';
     }else{
