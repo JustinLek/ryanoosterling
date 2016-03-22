@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/build/css/bower/bootstrap-d83f12b1a1.css" />
     <!-- endinject -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/build/css/style-600a2b65b8.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/build/css/style-298e8c2e46.css" />
     <!-- endinject -->
 </head>
 <body>

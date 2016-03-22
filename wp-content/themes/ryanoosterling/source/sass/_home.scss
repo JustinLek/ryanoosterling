@@ -28,7 +28,7 @@
     }
 }
 
-.recent-work{
+.recent-work, #single{
     @include breakpoint(tablet){
         margin: 70px 0;
     }

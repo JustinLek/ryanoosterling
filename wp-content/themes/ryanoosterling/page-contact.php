@@ -6,7 +6,7 @@
     </div>
 </div>
 <div class="container">
-    <div class="row contact">
+    <div class="row nopadding contact">
         <div class="col-md-5 left">
             <h1>Ryan Oosterling</h1>
             <div class="social">
@@ -15,6 +15,7 @@
             </div>
         </div>
         <div class="col-md-6 col-md-offset-1 form">
+            <h2>Get in touch</h2>
             <?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
         </div>
     </div>

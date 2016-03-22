@@ -16,7 +16,7 @@ $(document).ready(function(){
         });
     }
     init();
-    $('.ninja-forms-form').find('.ninja-forms-all-fields-wrap').addClass('row');
+    $('.ninja-forms-form').find('.ninja-forms-all-fields-wrap').addClass('');
     $('.ninja-forms-form').find('input.small').parent().addClass('col-md-6');
     $('.ninja-forms-form').find('.full').parent().addClass('col-md-12');
     $('.ninja-forms-form').find('input[type=submit]').parent().addClass('col-md-12'); 

@@ -46,6 +46,11 @@ function parallax($path, $quote) {
     }
 }
 
+function otherPosts($id){
+    $prev_post = get_previous_post();
+    echo $prev_post;
+}
+
 class Custom_Walker_Nav_Menu extends Walker_Nav_Menu { 
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){
         global $wp_query;

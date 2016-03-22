@@ -1,26 +1,18 @@
 footer{
-
-}
-
-footer .container{
-    border-top: 5px solid #e0e0e0; 
-}
-
-footer .container p{
-    text-transform: uppercase;
-    text-align: center;
-    margin: 20px 0;
-}
-
-footer .container p > img{
-    height: 30px;
-}
-
-footer .container p .social{
-    position: relative;
-    float: right;
-}
-
-footer .container p .social img{
-    height: 20px;
+    p{	
+    	border-top: 5px solid #e0e0e0; 
+    	text-transform: uppercase;
+    	text-align: center;
+    	padding: 20px 0;
+    	> img{
+    		height: 30px;
+    	}
+    	.social{
+    		position: relative;
+    		float: right;	
+    		img{
+    			height: 20px;
+    		}
+    	}
+    }
 }
