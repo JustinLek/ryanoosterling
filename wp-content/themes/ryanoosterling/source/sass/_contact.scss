@@ -1,6 +1,26 @@
 .contact {
+    margin: 100px 0 !important;
     h2{
         font-size: 36px;
+        margin-top: 0;
+    }
+    .left{
+        border-top: 5px solid #e0e0e0; 
+        border-bottom: 5px solid #e0e0e0;  
+        margin-bottom: 20px;
+        text-align: right;
+        .social{
+            float: right;
+            margin-bottom: 40px;
+            display: table;
+            a{
+                text-decoration: none;
+                color: #343434;
+                font-size: 25px;
+                text-align: center;
+                margin: 0 10px 0 10px;
+            }
+        }
     }
     form {
         .field-wrap{
@@ -9,15 +29,27 @@
         input[type=text], textarea{
             background:#fafafa;
             padding: 7.5px;
-            border: 1px solid #c1c1c1;
+            border: 1px solid #c1c1c1; 
             width: 100%;
         }
         input[type=submit]{
+            text-transform: uppercase;
             float: right;
-            padding: 5px 40px;
+            padding: 14px 63px;
+            background: #fff;
+            border: 2px solid #c1c1c1;
+            color: #c1c1c1;
+        }
+        input[type=submit]:hover{
+            background: #c1c1c1;
+            color: #ffffff;
         }
         input[type=submit]::after{
             clear: both;
+        }
+        textarea{
+            resize:none;
+            height: 200px;
         }
         .hp-wrap{
             display: none;
@@ -37,6 +69,18 @@
                         font-weight: 100;
                     }
                 }
+            }
+        }
+        .ninja-forms-error{ 
+            input.ninja-forms-field{
+                background: #fafafa url("../../assets/img/icon-error.svg") no-repeat right 10px center;
+                background-size: 12px 12px;
+                border: 1px solid #ed4343 !important;
+            }
+            textarea.ninja-forms-field{
+                background: url("../../assets/img/icon-error.svg") no-repeat right 10px top 10px;
+                background-size: 12px 12px;
+                border: 1px solid #ed4343 !important;
             }
         }
     }

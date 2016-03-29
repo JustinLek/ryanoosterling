@@ -32,7 +32,7 @@ function wpshout_custom_sizes( $sizes ) {
 
 add_filter('the_content','my_strip_tags');
 function my_strip_tags($content='') {
-   return strip_tags($content, '<p><a><i><div>');
+   return strip_tags($content, '<p><a><i><div><dl><dt><dd><h2>');
 }
 
 add_image_size( 'featured-thumb', 500, 500, true ); // (cropped)
